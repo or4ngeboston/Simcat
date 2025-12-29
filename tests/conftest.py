@@ -2,6 +2,9 @@ import pytest
 from playwright.sync_api import Browser, BrowserContext, Page, sync_playwright
 from pages.landing_page import LandingPage
 from pages.staking_page import StakingPage
+from pages.tokenomics_page import TokenomicsPage
+from pages.whitepaper_page import WhitepaperPage
+from pages.executive_summary_page import ExecutiveSummaryPage
 
 @pytest.fixture(scope="session")
 def playwright_instance():
@@ -28,3 +31,16 @@ def landing_page(page):
 @pytest.fixture
 def staking_page(page):
     return StakingPage(page)
+
+@pytest.fixture
+def tokenomics_page(page):
+    return TokenomicsPage(page)
+
+@pytest.fixture
+def whitepaper_page(page):
+    return WhitepaperPage(page)
+
+@pytest.fixture
+def executive_summary_page(page):
+    return ExecutiveSummaryPage(page)
+
