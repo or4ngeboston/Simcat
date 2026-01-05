@@ -14,15 +14,24 @@ class LandingPage(BasePage):
         self.nav_staking = "a[href='/staking']"
         self.nav_faq = "header >> text=FAQ"
         
-        # Presale Widget
-        self.presale_widget = ".presale-card" # Assuming based on exploration
-        self.currency_eth = "button:has-text('ETH')"
-        self.buy_input = "input[placeholder='0']"
-        self.buy_with_crypto_btn = "button:has-text('Buy with Crypto')"
-        
-        # Wallet Modal
-        self.wallet_modal = "text=CONNECT A WALLET"
-        self.close_modal = "button.modal-close" # Placeholder, will refine if needed
+        # Headers
+        self.simcat_token_roadmap_airdrop = "heading:has-text('$Simcat token roadmap airdrop')"
+        self.simcat_token_benefits = "heading:has-text('$Simcat Token Benefits')"
+        self.simcat_token_full_roadmap = "heading:has-text('$SIMCAT TOKEN FULL ROADMAP')"
+        self.faq = "heading:has-text('Frequently Asked Questions')"
+        self.legal_disclaimer_1 = "heading:has-text('Disclaimer: Please check your')"
+        self.legal_disclaimer_2 = "heading:has-text('LEGAL DISCLAIMER: This page')"
+
+        # Buttons
+        self.buy_with_crypto = "button:has-text('Buy with Crypto')"
+        self.how_to_buy = "button:has-text('How to Buy')"
+        self.buy_now = "button:has-text('Buy now')"
+
+        # Texts
+        self.simcat_crypto_presale = "text=$SIMCAT CRYPTO PRESALE"
+        self.buy_simcat = "text=Buy $SIMCAT and getthe best"
+        self.aligned_with_us = "text=Aligned with U.S. regulatory"
+        self.presale_has_started = "text=Presale has started on the"
 
     def navigate_to_site(self):
         self.navigate(self.url)

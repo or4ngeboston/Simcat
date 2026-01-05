@@ -10,6 +10,13 @@ class executiveSummaryPage(BasePage):
         self.investor_value = "text=Investor Value Proposition &"
         self.total_staked = "text=Total Staked"
         self.overview_text = "text=SIMCAT is a Solana-based"
+        
+        # Headings
+        self.simcat_token = "heading:has-text('SIMCAT TOKEN')"
+        self.simcat = "heading:has-text('$SIMCAT')"
+
+        # Links
+        self.simcat_token_executive_summary_link = "link:has-text('$SIMCAT Token Executive')"
 
         # Pictures
         self.qr_picture = "img:has-text('summary-qr')"
