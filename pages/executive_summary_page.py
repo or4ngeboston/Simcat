@@ -1,7 +1,7 @@
 from pages.base_page import BasePage
 from playwright.sync_api import Page
 
-class executiveSummaryPage(BasePage):
+class ExecutiveSummaryPage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
         self.url = "https://simcat.ssd.uz/executive-summary"

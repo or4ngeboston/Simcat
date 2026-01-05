@@ -13,3 +13,4 @@ def test_staking_buttons_visible(staking_page: StakingPage):
     staking_page.navigate_to_staking()
     assert staking_page.is_visible(staking_page.claim_rewards_btn)
     assert staking_page.is_visible(staking_page.buy_and_stake_btn)
+    assert staking_page.is_visible(staking_page.withdraw_btn)

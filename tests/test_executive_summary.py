@@ -14,3 +14,16 @@ def tokenomics_qr_pic_visible(executive_summary_page: ExecutiveSummaryPage):
     executive_summary_page.navigate_to_executive_summary()
     assert executive_summary_page.is_visible(executive_summary_page.qr_picture)
 
+def tokenomics_texts_heading_visible(executive_summary_page: ExecutiveSummaryPage):
+    executive_summary_page.navigate_to_executive_summary()
+    assert executive_summary_page.is_visible(executive_summary_page.investor_value)
+    assert executive_summary_page.is_visible(executive_summary_page.total_staked)
+    assert executive_summary_page.is_visible(executive_summary_page.overview_text)
+    assert executive_summary_page.is_visible(executive_summary_page.simcat_token)
+    assert executive_summary_page.is_visible(executive_summary_page.simcat)
+
+def tokenomics_links_clickable(executive_summary_page: ExecutiveSummaryPage):
+    executive_summary_page.navigate_to_executive_summary()
+    assert executive_summary_page.is_clickable(executive_summary_page.simcat_token_executive_summary_link)
+
+
