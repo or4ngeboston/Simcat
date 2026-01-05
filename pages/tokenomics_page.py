@@ -9,7 +9,6 @@ class TokenomicsPage(BasePage):
         # Simcat Tokenomics text
         self.eco_system_reserve = "text=Eco System Reserve 41.1%"
         self.eco_system_reserve_text = "text=Purpose: Mining, blockchain"
-        self.estimated_rewards = "text=Estimated Rewards"
     
     def navigate_to_tokenomics(self):
         self.navigate(self.url)

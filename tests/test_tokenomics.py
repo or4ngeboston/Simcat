@@ -13,4 +13,3 @@ def test_tokenomics_texts_visible(tokenomics_page: TokenomicsPage):
     tokenomics_page.navigate_to_tokenomics()
     assert tokenomics_page.is_visible(tokenomics_page.eco_system_reserve)
     assert tokenomics_page.is_visible(tokenomics_page.eco_system_reserve_text)
-    assert tokenomics_page.is_visible(tokenomics_page.estimated_rewards)

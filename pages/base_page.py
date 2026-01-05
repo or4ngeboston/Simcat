@@ -19,8 +19,13 @@ class BasePage:
     def is_visible(self, selector: str) -> bool:
         return self.page.is_visible(selector)
 
-    def is_clickable(self, locator):
+    def is_clickable(self, selector_or_locator):
         try:
+            if isinstance(selector_or_locator, str):
+                locator = self.page.locator(selector_or_locator)
+            else:
+                locator = selector_or_locator
+            
             locator.click(trial=True, timeout=5000)
             return True
         except Exception:

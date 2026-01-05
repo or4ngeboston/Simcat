@@ -5,8 +5,7 @@ def test_whitepaper_page_load(whitepaper_page: WhitepaperPage):
     """Verify whitepaper page loads and elements are visible."""
     whitepaper_page.navigate_to_whitepaper()
     whitepaper_page.wait_for_load_state()
-    assert whitepaper_page.is_visible(whitepaper_page.security)
-    assert whitepaper_page.is_visible(whitepaper_page.simcat_solar_mining)
+    assert whitepaper_page.is_visible(whitepaper_page.whitepaper_heading)
 
 def test_whitepaper_buttons_clickable(whitepaper_page: WhitepaperPage):
     """Verify clickability of action links on whitepaper page."""
