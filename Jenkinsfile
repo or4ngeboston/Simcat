@@ -1,36 +1,31 @@
 pipeline {
     agent {
-        docker {
-            image 'mcr.microsoft.com/playwright/python:v1.57.0-noble'
-            args '--workdir /workspace --ipc=host'  // Fixes path bug + better for browsers
+        dockerfile {
+            filename 'Dockerfile'  // Uses the Dockerfile you added
+            args '--ipc=host'  // Optional: Improves browser performance in container
         }
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm  // Explicit if needed
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
-                // Browsers are pre-installed in this image
+                // No need for 'playwright install' — browsers are pre-installed in the base image
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'pytest --junitxml=results.xml --html=report.html --self-contained-html'  // Adjust command to your needs
+                sh 'pytest --junitxml=results.xml --html=report.html --self-contained-html'  // Customize pytest flags as needed (e.g., add --browser if parameterized)
             }
         }
 
         stage('Publish Results') {
             steps {
-                junit 'results.xml'
+                junit 'results.xml'  // Or '**/*.xml' if multiple files
                 archiveArtifacts artifacts: 'results.xml, report.html', allowEmptyArchive: true
-                // Add publishHTML if you use it
+                // If using HTML Publisher plugin:
+                // publishHTML(target: [allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '.', reportFiles: 'report.html', reportName: 'Playwright Report'])
             }
         }
     }
