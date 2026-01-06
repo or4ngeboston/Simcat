@@ -21,6 +21,21 @@ pipeline {
             }
         }
 
+        stage('Build') {
+            steps {
+                git 'https://github.com/or4ngeboston/Simcat'
+                sh './gradlew clean test'
+            }
+            post {
+                always {
+                    allure includeProperties:
+                     false,
+                     jdk: '',
+                     results: [[path: 'build/allure-results']]
+                }
+            }
+        }       
+
         stage('Publish Results') {
             steps {
                 junit 'results.xml'  // Or '**/*.xml' for multiple reports
