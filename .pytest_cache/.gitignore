@@ -1,2 +1,86 @@
 # Created by pytest automatically.
-*
+
+# Python bytecode and caches
+__pycache__/
+**/__pycache__
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit testing / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.coverage
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pyre
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.envrc
+.venv
+
+# VS Code specific
+.vscode/*
+!.vscode/extensions.json  # Optionally keep recommended extensions
+!.vscode/settings.json    # Commit if you want shared settings; otherwise ignore personal ones
+
+# pyenv
+.python-version
+
+# Other common
+*.log
+__pypackages__/
+.ruff_cache/
