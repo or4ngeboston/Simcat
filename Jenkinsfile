@@ -23,7 +23,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                git 'https://github.com/or4ngeboston/Simcat'
+                git branch: 'dev', url: 'https://github.com/or4ngeboston/Simcat'
                 sh './gradlew clean test'
             }
             post {
