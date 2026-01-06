@@ -1,0 +1,13 @@
+[
+  "tests/test_executive_summary.py::test_executive_summary_page_load",
+  "tests/test_landing.py::test_currency_selection",
+  "tests/test_landing.py::test_landing_page_load",
+  "tests/test_landing.py::test_open_wallet_modal",
+  "tests/test_staking.py::test_staking_buttons_visible",
+  "tests/test_staking.py::test_staking_page_load",
+  "tests/test_tokenomics.py::test_tokenomics_page_load",
+  "tests/test_tokenomics.py::test_tokenomics_texts_visible",
+  "tests/test_whitepaper.py::test_whitepaper_buttons_clickable",
+  "tests/test_whitepaper.py::test_whitepaper_buttons_visible",
+  "tests/test_whitepaper.py::test_whitepaper_page_load"
+]

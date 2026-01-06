@@ -1,0 +1,4 @@
+{
+  "tests/test_landing.py::test_currency_selection": true,
+  "tests/test_whitepaper.py::test_whitepaper_buttons_visible": true
+}
