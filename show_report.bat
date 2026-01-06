@@ -1,0 +1,3 @@
+@echo off
+echo Generating and serving Allure report...
+allure.cmd serve allure-results
